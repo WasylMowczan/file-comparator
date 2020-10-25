@@ -1,10 +1,9 @@
-package com.metrosoft
+package com.wasylmowczan
 
 import com.wasylmowczan.matchers.Comparator
 import com.wasylmowczan.matchers.Report
 import com.wasylmowczan.matchers.ReportComparator
 import com.wasylmowczan.matchers.txt.comparators.IgnoreTextComparator
-import com.wasylmowczan.matchers.txt.comparators.TextComparators
 import org.apache.poi.ss.usermodel.Cell
 import spock.lang.Specification
 import spock.lang.Unroll
