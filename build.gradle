@@ -1,0 +1,43 @@
+buildscript {
+    repositories {
+        maven { url 'http://repo.spring.io/libs-snapshot' }
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:4.10.0'
+        classpath 'pl.allegro.tech.build:axion-release-plugin:1.12.0'
+    }
+}
+
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+group 'com.wasylmowczan'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven {
+        url('http://www.robotooling.com/maven')
+    }
+    maven {
+        url('http://artifactory.metrosoft.com:8081/artifactory/components-lib/')
+    }
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    compile group: 'bad.robot', name: 'simple-excel', version: '1.2'
+    compile group: 'de.redsix', name: 'pdfcompare', version: '1.1.50'
+    compile group: 'com.google.guava', name: 'guava', version: '29.0-jre'
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+    compile group: 'junit', name: 'junit', version: '4.12'
+
+    testCompile group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'
+}
